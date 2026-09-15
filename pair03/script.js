@@ -61,24 +61,43 @@
 
 // 4
 //
-let product_name = prompt("Enter your product name:");
-let product_price = +prompt("Enter your product price:");
-let product_amount = +prompt("Enter your product amount:");
-let discount_card = confirm("Do you have the discount cards?");
-let delivery_type = prompt("Enter your delivery type (courier, mail, pickup):");
+// let product_name = prompt("Enter your product name:");
+// let product_price = +prompt("Enter your product price:");
+// let product_amount = +prompt("Enter your product amount:");
+// let if_has_card = confirm("Do you have the discount cards?");
+// let delivery_type = prompt("Enter your delivery type (courier, mail, pickup):");
 
-let total_price = product_price * product_amount;
+// let total_price = product_price * product_amount;
 
-let shop_discount = 0
+// let shop_discount = 0;
+// if (total_price >= 10000) {
+//     shop_discount = 0.15;
+// }
+// else if (total_price >= 5000) {
+//     shop_discount = 0.10;
+// }
+// else if (total_price >= 2000) {
+//     shop_discount = 0.05;
+// }
 
-if (total_price >= 10000) {
-    shop_discount = 0.15;
-}
-else if (total_price >= 5000) {
-    shop_discount = 0.10;
-}
-else if (total_price >= 2000) {
-    shop_discount = 0.05;
-}
+// let card_discount;
+// if (if_has_card) {
+//     card_discount = 0.1;
+// } 
+// else {
+//     card_discount = 0;
+// }
 
-let shop_discount_card = confirm("Do you have the discount cards?");
+// let delivery_cost = 0;
+// switch (delivery_type) {
+//     case 'mail':
+//         delivery_cost = 200;
+//         break;
+//     case 'courier':
+//         delivery_cost = 100;
+//         break;
+// }
+
+// let ultimate_price = total_price * (1 - shop_discount - card_discount) + delivery_cost;
+
+// alert(ultimate_price);
