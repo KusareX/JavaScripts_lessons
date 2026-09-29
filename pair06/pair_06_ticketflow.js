@@ -19,7 +19,7 @@ while (true) {
             whether_valid = true;
             break;
         default:
-            alert('Such option unavailable');gi
+            alert('Such option unavailable');
     }
     if (whether_valid) {
         break;
@@ -36,12 +36,12 @@ while (true) {
 }
 
 if (day_type === 2) {
-    start_price = start_price + start_price * 0.15
+    start_price = start_price * 1.15;
 }
 
 let ticket_amount;
 while (true) {
-    ticket_amount = +prompt('Enter the amount of tickets (from 1 to 6)')
+    ticket_amount = +prompt('Enter the amount of tickets (from 1 to 6)');
     if (ticket_amount >= 1 && ticket_amount <= 6) {
         break;
     }
@@ -56,64 +56,71 @@ let total_price = 0;
 
 for (let i = 1; i <= ticket_amount; i++) {
     let age;
+    
     while (true) {
-        age = +prompt('Enter your age');
-        if (!Number.isNaN(age) && age >= 0 && age <= 150) {
-            break;
-        }
+        age = +prompt('Enter your age (-1 to exit)');
+        
         if (age === -1) {
             break;
         }
+        
+        if (!Number.isNaN(age) && age >= 0 && age <= 150) {
+            break;
+        }
+        
         alert('Enter the correct age');
     }
-    
+
+    if (age === -1) {
+        break;
+    }
+
     tickets_total++;
-    
-    let discount_percentage = 0;
 
     if (age >= 0 && age <= 5) {
         free_tickets++;
         continue;
     }
-    else if (age >= 6 && age <= 12) {
-        discount_percentage = 0.5;
-    }
-    else if (age >= 13 && age <= 17) {
-        discount_percentage = 0.8;
-    }
-    else if (age >= 18 && age <= 59) {
+
+    let discount_percentage = 0;
+
+    if (age >= 6 && age <= 12) {
+        discount_percentage = 50;
+    } else if (age >= 13 && age <= 17) {
+        discount_percentage = 20;
+    } else if (age >= 18 && age <= 59) {
         discount_percentage = 0;
-    }
-    else if (age >= 60) {
-        discount_percentage = 0.75;
+    } else if (age >= 60) {
+        discount_percentage = 25;
     }
 
-    if (age >= 15 && age <= 25) {
+    if (age >= 18 && age <= 25) {
         let whether_has_student_ticket = confirm('Do you have student\'s ticket?');
         if (whether_has_student_ticket) {
-            discount_percentage += 0.1
+            discount_percentage += 10;
         }
     }
 
-    let new_ticket_price = start_price * (1 - discount_percentage);
-    total_price += new_ticket_price;
-
     if (discount_percentage > 0) {
         discount_tickets++;
-    }
-    else {
+    } else {
         full_price_tickets++;
     }
-
-    let final_price = total_price;
-    if (total_price > 1000) {
-        final_price = total_price * 0.95;
-    }
-    
-    alert(`Tickets_total: ${tickets_total}\n` +
-        `Free tickets: ${free_tickets}\n` +
-        `Discount tickets: ${discount_tickets}\n` +
-        `Full price tickets: ${full_price_tickets}\n` +
-        `Ultimate price: ${total_price} uah`
-    )
+ 
+    let ticket_price = start_price * (1 - discount_percentage / 100);
+    total_price += ticket_price;
 }
+
+let final_price = total_price;
+if (total_price > 1000) {
+    final_price = total_price * 0.95;
+}
+
+alert(
+    `Tickets total: ${tickets_total}\n` +
+    `Free tickets: ${free_tickets}\n` +
+    `Discount tickets: ${discount_tickets}\n` +
+    `Full price tickets: ${full_price_tickets}\n` +
+    `Total price: ${total_price} uah\n` +
+    `Ultimate price: ${final_price} uah`
+);
