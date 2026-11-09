@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel=stylesheet href="style.css">
+</head>
+<body>
+<main class="course-card" id="card">
+    <p class="tag">Educational platform</p>
+    <h1>Web development course</h1>
+    <p id="welcome">We are glad to see you!</p>
+
+    <label for="studentName">Your name</label>
+    <input id="studentName" type="text" placeholder="Enter your name">
+
+    <label for="studentName">Format of studying</label>
+    <select id="format">
+        <option value="1500">Online - 1500 UAH</option>
+        <option value="2000">Offline - 2000 UAH</option>
+    </select>
+    
+    <p class="cost">To pay: <strong id="strong">1500 UAH</strong></p>
+    <button id="enrollBtn">Enroll</button>
+    <p id="status">You are not enrolled on the course </p>
+
+    <button id="detailsBtn" class="secondary">Show description</button>
+    <p class="hidden" id="details">Practical web-programming course</p>
+    <button id="themeBtn" class="secondary">Dark theme</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
