@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+    background: #e1d7d7;
+    color: #0a380b;
+}
+
+.profileCard {
+    min-height: min(440px, 90vh);
+    padding: 30px;
+    background: #d1c2c2;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(48, 192, 142, 0.8);
+}
+
+#welcomeTag {
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    margin: 20px 0;
+    background: #2cdd37;
+    color: #0a380b;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+button:hover {
+    background: #1a9222;
+    color: #8dd18e;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #2b5d3c;
+    width: 50%;
+    margin: 10px auto;
+}   
+
+select {
+    margin-top: 15px;
+}
+
+.hidden {
+    display: None;
+}
+
+.darkTheme {
+    background: #0d2013;
+    color: #a7f09f
+}

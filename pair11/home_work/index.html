@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="profileCard">
+    <h1>Profile settings</h1>
+    <p id="welcomeTag">Welcome!</p>
+
+    <label for="studentName">Your name</label>
+    <input id="studentName" type="text" placeholder="Enter your name">
+    <button id="confirmBtn">Confirm</button>
+
+    <hr>
+
+    <select id="themeSelect">
+        <option value="light">Light theme (Chosen)</option>
+        <option value="dark">Dark theme</option>
+    </select>
+
+    <button id="detailsBtn">Show description</button>
+    <p class="hiddenContent" id="details">Additional information</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
