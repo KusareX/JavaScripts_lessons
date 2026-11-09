@@ -6,7 +6,7 @@ enrollBtn.addEventListener('click', function() {
     statusDoc.classList.add('success');
 })
 
-let studentName = document.querySelector('#student-name');
+let studentName = document.querySelector('#studentName');
 let welcome = document.querySelector('#welcome');
 studentName.addEventListener('input', function() {
     let nameDoc = studentName.value.trim();
