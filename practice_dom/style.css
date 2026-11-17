@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #f2ebf7;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.club-event {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.header-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header-container h1 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.header-container p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.left-container {
+    flex: 0 0 350px;
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.right-container {
+    flex: 1;
+    min-width: 300px;
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.left-container h2, .right-container h2 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.left-form-row p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+
+.left-form-row input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #0f172a;
+    outline: none;
+}
+
+.btn-add-request {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.right-form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.stats-p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.stats-val {
+    font-size: 22px;
+    color: #0f172a;
+}
+
+.btn-clear-all {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.participant-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.participant-card p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 4px 0 8px;
+}
+
+.status-card {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.status-card.confirmed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-card.awaiting {
+    background: #c5bdf0;
+    color: #7e40aa;
+}
+
+.btn-toggle, .btn-delete {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-toggle {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.btn-delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 8px;
+}

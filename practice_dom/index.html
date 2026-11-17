@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="club-event">
+        <div class="header-container">
+            <h1>Event club</h1>
+            <p>Control the requests for participating in school activities</p>
+        </div>
+
+        <section class="left-container">
+            <h2>New request</h2>
+
+            <div class="left-form-row">
+                <p>Participant name</p>
+                <input type="text" id="participant-name" placeholder="Enter your name">
+
+                <p>Event name</p>
+                <input type="text" id="event-name" placeholder="Enter your event">
+            </div>
+
+            <p id="error-message" class="error-message"></p>
+
+            <button type="button" id="add-button" class="btn-add-request">+ Add request</button>
+        </section>
+
+        <section class="right-container">
+            <h2>Participants</h2>
+
+            <div class="right-form-row">
+                <div class="stat-box">
+                    <p class="stats-p">Total requests</p>
+                    <strong class="stats-val" id="total-count">0</strong>
+                </div>
+
+                <div class="stat-box">
+                    <p class="stats-p">Confirmed requests</p>
+                    <strong class="stats-val" id="confirmed-count">0</strong>
+                </div>
+            </div>
+
+            <p id="empty-message">No requests yet</p>
+
+            <div id="participants-list" class="participants-list"></div>
+
+            <button type="button" class="btn-clear-all" id="clear-all">Clear all</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
